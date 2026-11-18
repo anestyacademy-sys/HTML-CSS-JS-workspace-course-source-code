@@ -1,0 +1,187 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <!-- ⚠️ Fel vidéo: n7i el sater hedha w chouf el page fel mobile -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Media Queries</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header class="header">
+      <nav class="nav container">
+        <a href="#home" class="logo">🫒 Dar Zitouna</a>
+
+        <input type="checkbox" id="menu-toggle" />
+        <label for="menu-toggle" class="hamburger">☰</label>
+
+        <ul class="nav-links">
+          <li><a href="#features">3lech a7na</a></li>
+          <li><a href="#products">Produits</a></li>
+          <li><a href="#about">El 7kaya</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero" id="home">
+        <div class="container">
+          <h1>Zit zitoun tounsi, extra vierge w 100% tabi3i</h1>
+          <p>Ma3sour bel bared, direct mel ferme mte3na f Sfax.</p>
+          <div class="hero-buttons">
+            <a href="#products" class="btn">Choufi el produits</a>
+            <a href="#about" class="btn-outline">El 7kaya mte3na</a>
+          </div>
+        </div>
+      </section>
+
+      <section class="section bg-light" id="features">
+        <div class="container">
+          <h2 class="section-title">3lech Dar Zitouna?</h2>
+
+          <div class="features-grid">
+            <div class="card">
+              <div class="card-icon">🌿</div>
+              <h3>100% Bio</h3>
+              <p>Bla pesticides, bla produits chimiques.</p>
+            </div>
+            <div class="card">
+              <div class="card-icon">❄️</div>
+              <h3>Ma3sour bel bared</h3>
+              <p>Bech n7afdhou 3al vitamines w el bnina.</p>
+            </div>
+            <div class="card">
+              <div class="card-icon">🚚</div>
+              <h3>Livraison f kol Tounes</h3>
+              <p>Toussel l bab darek f 48h.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="products">
+        <div class="container">
+          <h2 class="section-title">Produits mte3na</h2>
+
+          <div class="products-grid">
+            <div class="product">
+              <img
+                src="https://picsum.photos/seed/zitouna-1/600/400"
+                alt="Bouteille zit 1 litre"
+              />
+              <div class="product-info">
+                <h3>Bouteille 1L</h3>
+                <p>Lel isti3mal el yawmi.</p>
+                <p class="price">25 DT</p>
+                <a href="#contact" class="btn">Commandi</a>
+              </div>
+            </div>
+
+            <div class="product">
+              <span class="badge">Best seller</span>
+              <img
+                src="https://picsum.photos/seed/zitouna-2/600/400"
+                alt="Bidon zit 3 litres"
+              />
+              <div class="product-info">
+                <h3>Bidon 3L</h3>
+                <p>El format el préféré mta3 el familles.</p>
+                <p class="price">70 DT</p>
+                <a href="#contact" class="btn">Commandi</a>
+              </div>
+            </div>
+
+            <div class="product">
+              <img
+                src="https://picsum.photos/seed/zitouna-3/600/400"
+                alt="Bidon zit 5 litres"
+              />
+              <div class="product-info">
+                <h3>Bidon 5L</h3>
+                <p>Mouna mta3 el 3am lkol.</p>
+                <p class="price">110 DT</p>
+                <a href="#contact" class="btn">Commandi</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section bg-light" id="about">
+        <div class="container about">
+          <img
+            src="https://picsum.photos/seed/zitouna-about/800/600"
+            alt="Ferme mta3 zitoun f Sfax"
+          />
+          <div>
+            <h2>3 ajyal w nafs el 7obb lel zitoun</h2>
+            <p>
+              Men 1965, 3ayeltna tkhdem f ard zitoun f Sfax. Nkhalltou el
+              taqalid m3a technologie moderne bech nwassloulkom a7sen zit.
+            </p>
+            <a href="#contact" class="btn">Contacti-na</a>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="faq">
+        <div class="container faq">
+          <h2 class="section-title">As2ila tetsa2el barcha</h2>
+
+          <details>
+            <summary>9addech twalli el livraison?</summary>
+            <p>
+              Bin 24h w 48h f Tounes el kbira, w 72h max lel wileyet lokhrin.
+            </p>
+          </details>
+          <details>
+            <summary>Kifech nkhallas?</summary>
+            <p>Cash ki toussel el commande.</p>
+          </details>
+          <details>
+            <summary>Kifech n7afedh 3al zit?</summary>
+            <p>F blasa bed w dhalma, b3id 3al chams.</p>
+          </details>
+        </div>
+      </section>
+
+      <section class="section bg-light" id="contact">
+        <div class="container contact">
+          <div>
+            <h2>Commandi tawa 🫒</h2>
+            <p>3abbi el formulaire w nkallmouk f a9al men 24h.</p>
+            <p>📍 Sfax, Tounes</p>
+            <p>📞 +216 00 000 000</p>
+          </div>
+
+          <form action="#" method="post">
+            <label for="name">Esmek</label>
+            <input type="text" id="name" name="name" required />
+
+            <label for="phone">Téléphone</label>
+            <input type="tel" id="phone" name="phone" required />
+
+            <label for="product">Produit</label>
+            <select id="product" name="product">
+              <option>Bouteille 1L</option>
+              <option>Bidon 3L</option>
+              <option>Bidon 5L</option>
+            </select>
+
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="4"></textarea>
+
+            <button type="submit" class="btn">Ab3ath el commande</button>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container">
+        <p>&copy; 2026 Dar Zitouna. Projet pédagogique.</p>
+      </div>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,325 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+
+
+/* ===== VARIABLES ===== */
+:root {
+  --green: #2f5d34;
+  --green-dark: #1e3d22;
+  --gold: #c9a227;
+  --dark: #1a1a1a;
+  --text: #4a4a4a;
+  --light: #faf8f2;
+  --white: #ffffff;
+}
+
+/* ===== RESET ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+  color: var(--text);
+  line-height: 1.7;
+}
+
+h1, h2, h3 {
+  font-family: "Poppins", sans-serif;
+  color: var(--dark);
+  line-height: 1.2;
+}
+
+img { max-width: 100%; display: block; }
+a { text-decoration: none; color: inherit; }
+ul { list-style: none; }
+
+/* ===== LAYOUT ===== */
+.container {
+  width: 90%;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.section { padding: 80px 0; }
+.bg-light { background: var(--light); }
+
+.section-title {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 48px;
+}
+
+/* ===== BUTTONS ===== */
+.btn {
+  display: inline-block;
+  padding: 12px 28px;
+  background: var(--green);
+  color: var(--white);
+  border-radius: 50px;
+  font-weight: 500;
+}
+.btn:hover { background: var(--green-dark); }
+
+.btn-outline {
+  display: inline-block;
+  padding: 12px 28px;
+  border: 2px solid var(--white);
+  color: var(--white);
+  border-radius: 50px;
+}
+.btn-outline:hover {
+  background: var(--white);
+  color: var(--green);
+}
+
+
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: var(--white);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 16px 0;
+}
+
+.logo {
+  font-family: "Poppins", sans-serif;
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: var(--green);
+}
+
+/* Mobile: menu makhfi */
+#menu-toggle { display: none; }
+
+.hamburger {
+  font-size: 1.8rem;
+  cursor: pointer;
+}
+
+.nav-links {
+  display: none;
+  width: 100%;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  padding-top: 16px;
+}
+
+#menu-toggle:checked ~ .nav-links { display: flex; }
+
+.nav-links a:hover { color: var(--green); }
+
+/* Desktop */
+@media (min-width: 768px) {
+  .hamburger { display: none; }
+
+  .nav-links {
+    display: flex;
+    width: auto;
+    flex-direction: row;
+    gap: 32px;
+    padding-top: 0;
+  }
+}
+
+
+
+.hero {
+  padding: 120px 0;
+  color: var(--white);
+  background:
+    linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+    url("https://picsum.photos/seed/zitouna-hero/1600/900") center / cover no-repeat;
+}
+
+.hero h1 {
+  color: var(--white);
+  font-size: clamp(2rem, 6vw, 3.5rem);
+  max-width: 700px;
+  margin-bottom: 16px;
+}
+
+.hero p {
+  font-size: 1.1rem;
+  max-width: 500px;
+  margin-bottom: 32px;
+}
+
+.hero-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+
+
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 24px;
+}
+
+.card {
+  background: var(--white);
+  padding: 32px;
+  text-align: center;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+}
+
+.card-icon {
+  font-size: 2.5rem;
+  margin-bottom: 16px;
+}
+
+.card h3 { margin-bottom: 8px; }
+
+
+
+.products-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 32px;
+}
+
+.product {
+  position: relative;          /* bech el badge yet7atteb par rapport lih */
+  background: var(--white);
+  border-radius: 12px;
+  overflow: hidden;            /* el image tetqass m3a el coins */
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+}
+
+.product img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+}
+
+.product-info { padding: 24px; }
+.product-info h3 { margin-bottom: 4px; }
+
+.price {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--green);
+  margin: 12px 0 16px;
+}
+
+.badge {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  padding: 4px 12px;
+  background: var(--gold);
+  color: var(--white);
+  font-size: 0.8rem;
+  border-radius: 50px;
+}
+
+
+
+/* Mobile: image fou9, texte louta */
+.about {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 32px;
+  align-items: center;
+}
+
+.about img { border-radius: 12px; }
+.about h2 { margin-bottom: 16px; }
+.about p { margin-bottom: 24px; }
+
+/* Desktop: 2 colonnes */
+@media (min-width: 768px) {
+  .about { grid-template-columns: 1fr 1fr; gap: 64px; }
+}
+
+
+
+.faq { max-width: 700px; }
+
+.faq details {
+  background: var(--light);
+  padding: 16px 24px;
+  border-radius: 8px;
+  margin-bottom: 12px;
+}
+
+.faq summary {
+  font-weight: 600;
+  color: var(--dark);
+  cursor: pointer;
+}
+
+.faq details p { margin-top: 12px; }
+
+/* ===== CONTACT ===== */
+.contact {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 48px;
+}
+
+.contact h2 { margin-bottom: 16px; }
+.contact p { margin-bottom: 8px; }
+
+form {
+  background: var(--white);
+  padding: 32px;
+  border-radius: 12px;
+}
+
+label {
+  display: block;
+  font-weight: 500;
+  margin-bottom: 6px;
+}
+
+input,
+select,
+textarea {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 20px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font: inherit;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+  outline: 2px solid var(--green);
+}
+
+button {
+  border: none;
+  cursor: pointer;
+  font: inherit;
+}
+
+@media (min-width: 768px) {
+  .contact { grid-template-columns: 1fr 1fr; }
+}
+
+/* ===== FOOTER ===== */
+.footer {
+  background: var(--dark);
+  color: #aaa;
+  text-align: center;
+  padding: 32px 0;
+}
